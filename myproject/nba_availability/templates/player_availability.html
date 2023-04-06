@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>NBA Player Availability</h1>
+    <ul>
+        {% for player in players %}
+            <li>{{ player.name }} - {% if player.available %}Available{% else %}Not Available{% endif %}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
